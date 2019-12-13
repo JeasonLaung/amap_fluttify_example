@@ -1,4 +1,4 @@
-import 'package:amap_all_fluttify/amap_all_fluttify.dart';
+import 'package:amap_map_fluttify/amap_map_fluttify.dart';
 import 'package:flutter/material.dart';
 import 'package:location_to_drive/common/global.dart';
 
@@ -26,11 +26,12 @@ class _IndexPageState extends State<IndexPage> {
           );
           amapController.showMyLocation(true);
           GlobalLocation.stream.listen((loc) async{
-            await polyline?.remove();
+            // await polyline?.remove();
             polyline = await _controller.addPolyline(PolylineOption(
               latLngList: GlobalLocation.latLngList,
               width: 40,
-              // customTexture: Uri(path: 'assets/images/polyline.jpg')
+              strokeColor: Colors.green,
+              customTexture: Uri.parse('assets/images/polyline.jpg')
             ));
           });
 

@@ -24,8 +24,14 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   fluwe: 
-    path: ../fluwe
-  amap_all_fluttify: ^0.5.0
+    git: https://github.com/JeasonLaung/fluwe
+    # ref: 0.0.1/branch/commit
+    # path: base(/map/location/search/navi)
+
+  amap_search_fluttify: 0.3.4+97873c8
+  amap_location_fluttify: 
+    path: ../amap_location_fluttify-0.4.0+82a2243
+  amap_map_fluttify: 0.10.2+a1a3fff
   permission_handler: ^4.0.0
 
 dev_dependencies:

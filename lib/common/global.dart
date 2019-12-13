@@ -2,8 +2,8 @@
 
 
 import 'dart:async';
-
-import 'package:amap_all_fluttify/amap_all_fluttify.dart';
+import 'package:amap_location_fluttify/amap_location_fluttify.dart';
+import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 
 class GlobalLocation {
   static Stream stream;
@@ -38,7 +38,7 @@ class GlobalLocation {
       /// 传下方
       _streamController?.sink?.add(loc);
     });
-    
+    AmapLocation.enableBackgroundLocation(title: '美葡出行', content:'美葡出行');
   }
 }
 

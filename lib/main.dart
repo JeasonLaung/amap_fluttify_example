@@ -1,4 +1,4 @@
-import 'package:amap_all_fluttify/amap_all_fluttify.dart';
+import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 import 'package:permission_handler/permission_handler.dart';
 import './page/index/index_page.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +10,7 @@ main() async{
     routesConfig: []
   );
   await AmapCore.init('a025de332f474095ef739f19060ba549');
+  await enableFluttifyLog(false); // 关闭log
   await GlobalLocation.init();
   await PermissionHandler().requestPermissions([
     PermissionGroup.location,
